@@ -10,7 +10,7 @@ export default function CupomList(){
     useEffect(()=>{
         async function fetchCupom(){
             try{
-                const response = await fetch("http://localhost:3333/api/cupons")
+                const response = await fetch("http://localhost:3333/api/cupons") //Pegar pela url o nome da coleção e pegar os cupons com o prefixo escolhido
                 const data = await response.json()
     
                 setCupons(data)
