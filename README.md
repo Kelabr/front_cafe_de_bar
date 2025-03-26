@@ -10,3 +10,6 @@ O café de bar a principio é um site dedicado a compartilhar cupons de deconto 
 - TailwindCSS
 - Shadcn/ui
 
+### Comando para iniciar:
+
+npm i --legacy-peer-deps
