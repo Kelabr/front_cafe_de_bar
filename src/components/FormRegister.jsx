@@ -10,7 +10,7 @@ export default function Form(){
     const [error, setError] = useState("")
     const [formData, setFormData] = useState({
         email:"",
-        password: ""
+        nome:""
     })
 
     function handleChange(e){
@@ -47,13 +47,21 @@ export default function Form(){
     return(
         <form className="flex flex-col items-center mt-5" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-2 w-full mb-4">
-                <label className=" font-medium" htmlFor="">Email</label>
-                <input className=" border-2 rounded-lg p-1" type="email" name="email" onChange={handleChange}/>
+                <label className=" font-medium" htmlFor="">Nome</label>
+                <input className=" border-2 rounded-lg p-1" type="text" name="nome" onChange={handleChange}/>
+            </div>
+            <div className="flex flex-col gap-2 mb-4 w-full">
+                <label className=" font-medium " htmlFor="">Email</label>
+                <input className=" border-2 rounded-lg p-1"  type="email" name="email" onChange={handleChange}/>
             </div>
             <div className="flex flex-col gap-2 mb-4 w-full">
                 <label className=" font-medium " htmlFor="">Senha</label>
                 <input className=" border-2 rounded-lg p-1"  type="password" name="password" onChange={handleChange}/>
             </div>
+            <div className="flex flex-col gap-2 mb-4 w-full">
+                <label className=" font-medium " htmlFor="">Confirmar Senha</label>
+                <input className=" border-2 rounded-lg p-1"  type="password" name="password" onChange={handleChange}/>
+            </div>            
             <button className="bg-black text-white w-full p-2 text-lg font-bold rounded-lg cursor-pointer mb-5">Enviar</button>
             <p className="text-lg font-medium text-red-500">{error}</p>
         </form>
