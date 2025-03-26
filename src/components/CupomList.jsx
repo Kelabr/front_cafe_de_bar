@@ -31,7 +31,7 @@ export default function CupomList(){
             ):(
                 <div>
                     {cupons.map((cupons)=>(
-                        <Cupom porcent={cupons.porcentagem} name={cupons.nome} description={cupons.description}/>
+                        <Cupom key={cupons._id.toString()} porcent={cupons.porcentagem} name={cupons.nome} description={cupons.descricao}/>
                     ))}
                 </div>
             )}
