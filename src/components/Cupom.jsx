@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Cupom({porcent,name, description}){
     return(
-        <Link href="/ops">
+        <Link href="#">
             <div className="flex flex-col bg-black p-5 rounded-xl gap-3 mb-4 cursor-pointer">
                 <div className="flex items-center justify-between">
                     <h1 className="text-white font-medium text-xl">{`${porcent}%  ${name}`}</h1>
