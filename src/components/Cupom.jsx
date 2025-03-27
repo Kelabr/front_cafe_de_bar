@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Cupom({porcent,name, description, _id}){
+export default function Cupom({porcent,name, description, _id, tipo}){
     return(
-        <Link href={`/bar/${_id}`}>
+        <Link href={`/${tipo}/${_id}`}>
             <div className="flex flex-col bg-black p-5 rounded-xl gap-3 mb-4 cursor-pointer">
                 <div className="flex items-center justify-between">
                     <h1 className="text-white font-medium text-xl">{`${porcent}%  ${name}`}</h1>
