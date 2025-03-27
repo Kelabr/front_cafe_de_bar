@@ -1,16 +1,20 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 import Cupom from "./Cupom"
 
 export default function CupomList(){
 
     const [cupons, setCupons] = useState([])
+    const pathName = usePathname()
+
+    const tipoCupons = pathName.split("/").filter(Boolean).pop()
 
     useEffect(()=>{
         async function fetchCupom(){
             try{
-                const response = await fetch("http://localhost:3333/api/cupons") //Pegar pela url o nome da coleção e pegar os cupons com o prefixo escolhido
+                const response = await fetch(`http://localhost:3333/api/cupons/${tipoCupons}`) //Pegar pela url o nome da coleção e pegar os cupons com o prefixo escolhido
                 const data = await response.json()
     
                 setCupons(data)
