@@ -1,6 +1,6 @@
 export default function CupomOpen(){
     return(
-        <main>
+        <main className="h-screen bg-black">
             
         </main>
     )
